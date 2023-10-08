@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    {{>navbar data=details}}
+    {{>slider slider=slider}}
+
+    <!-- Services Section -->
+    <section class="my-4 mb-8">
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <h1> a</h1>
+        <div class="container my-5">
+            <h1 class="text-center text-secondary">OUR SERVICES</h1>
+            <div class="row mt-5">
+
+{{#each service}}
+                <div class="col-md-4">
+                    <div class="card  ">
+                       <div class="card-body py-3">
+                        <div class="card-title service-icon ">
+                            <div class="container text-center text-secondary" >
+                            <i class="{{this.iconUrl}}"></i>
+                            </div>
+                            <h5>{{this.service}}</h5>
+                        </div>
+                        <p>{{this.discription}}</p>
+                        <a href="{{this.linkUrl}}">{{this.linkText}}</a>
+                       </div>
+                    </div>
+                </div>
+                                     {{/each}}
+            </div>
+        </div>
+    </section>
+
+
+<section class="contactus py-4">
+    <div class="container "><div class="row">
+        <div class="class-md-12">
+            <form action = "/ramisagoodboy" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text color">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">your contact number</label>
+    <input name="contact" type="number" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-floating mb-3">
+  <textarea name="quries" class="form-control" placeholder="enter your query here" id="floatingTextarea2" style="height: 200px"></textarea>
+  <label for="floatingTextarea2">Comments</label>
+</div>
+  <div class="text-center "><button type="submit" class="btn btn-primary">Submit</button></div>
+</form>
+        </div>
+    </div>
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
